@@ -1,17 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom'
+import Airtel from "./Airtel.js"
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+//ReactDOM.render("GM",document.getElementById("sunil"))
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//ReactDOM.render(<h2>Good Morning</h2>,document.getElementById("sunil"))
+ReactDOM.render(<div><h2>Good Morning</h2><h3>Welcome to Bangalore</h3></div>,document.getElementById("sunil"))
+
+//ReactDOM.render(<Airtel/>,document.getElementById("sunil"))
