@@ -1,4 +1,4 @@
-function Airtel(){
+/* function Airtel(){
 
 
     return <div>
@@ -9,4 +9,4 @@ function Airtel(){
     </div>
 }
 
-export default Airtel
+export default Airtel */

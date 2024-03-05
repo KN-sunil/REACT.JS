@@ -1,4 +1,4 @@
-import React,{Component} from "react"
+/* import React,{Component} from "react"
 
 class Message extends Component {
 
@@ -8,4 +8,4 @@ class Message extends Component {
         </div>
     }
 }
-export default Message
+export default Message */
