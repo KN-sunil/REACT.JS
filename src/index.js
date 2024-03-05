@@ -1,5 +1,5 @@
-/* import ReactDOM from 'react-dom'
-import Airtel from "./Airtel.js"
+/*  import ReactDOM from 'react-dom'
+//import Airtel from "./Airtel.js"
 import App from './App.js'
 
 //ReactDOM.render("GM",document.getElementById("sunil"))
@@ -10,3 +10,8 @@ import App from './App.js'
 //ReactDOM.render(<Airtel/>,document.getElementById("sunil"))
 
 ReactDOM.render(<App/>,document.getElementById("sunil")) */
+
+import ReactDOM  from "react-dom"
+
+import App from './App'
+ReactDOM.render(<App/>,document.getElementById("sunil"))

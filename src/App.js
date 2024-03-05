@@ -16,3 +16,12 @@ function App(){
 }
 
 export default App */
+
+import Navbar from "./Navbar/Navbar"
+import Movies from "./movies/Movies"
+function App(){
+    return <div>
+        <Navbar/>
+        <Movies/>
+    </div>
+}export default App
