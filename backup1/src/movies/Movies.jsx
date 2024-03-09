@@ -1,3 +1,4 @@
+//how to read data in react
 import React,{Component} from 'react'
 class Movies extends Component{
     movie_Name="RRR"
