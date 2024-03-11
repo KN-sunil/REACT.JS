@@ -1,4 +1,4 @@
-import React,{Fragment} from "react"
+/* import React,{Fragment} from "react"
 class Message extends React.Component{
   //    msg ="Hello"
   state={
@@ -24,6 +24,6 @@ class Message extends React.Component{
   }
 }
 
-export default Message
+export default Message */
 
 

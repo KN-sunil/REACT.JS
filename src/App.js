@@ -1,10 +1,9 @@
-import Message from "./Stateex/Message"
+import Product from "./Product/Product"
 function App() {
   return (
     <div>
-        <h2>App Component</h2>
-        <hr />
-       <Message/>
+      
+       <Product/>
     </div>
   )
 }

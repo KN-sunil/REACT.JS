@@ -3,7 +3,7 @@ class Message extends React.Component{
     msg = "Hello!"
     gmHandler = ()=>{
         this.msg = "Good Morning Rahul Gandhi"
-        console.log("good Morning!")
+       
         console.log(this.msg)
         this.forceUpdate()
     }
