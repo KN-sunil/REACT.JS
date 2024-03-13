@@ -2,7 +2,7 @@
 /* import Product2 from "./Product/Product2" */
 import Navbar from "./Navbar"
 //import Message from "./EB/Message"
-import Message from "./Message-1"
+import Message from "./EB/Message-1"
 function App() {
   return (
     <div>
