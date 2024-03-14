@@ -1,15 +1,31 @@
-//import Product from "./Product/Product1"
-/* import Product2 from "./Product/Product2" */
-import Navbar from "./Navbar"
-//import Message from "./EB/Message"
-import Message from "./EB/Message-1"
-function App() {
-  return (
-    <div>
-      <Navbar/>
-       <Message/>
-    </div>
-  )
+import {Link,BrowserRouter as Router,Routes,Route} from 'react-router-dom'
+import Home from './components/Home'
+import About from './components/About'
+import Services from './components/Services'
+import Contact  from './components/Contact'
+function App(){
+  return <div>
+    <Router>
+      <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
+        <Link to="#" className="navbar-brand">Logo</Link>
+        <div  className="ml-auto">
+            <ul className="navbar-nav">
+                <li> <Link to="/index" className="nav-link">Home</Link></li>
+                <li> <Link to="/about" className="nav-link">About</Link></li>
+                <li> <Link to="/services" className="nav-link">Service</Link></li>
+                <li> <Link to="/contact" className="nav-link">Contact</Link></li>
+            </ul>
+        </div>
+      </nav>
+      <Routes>
+      <Route path="/index"  element={<Home/>}/>
+      <Route path="/about"  element={<About/>}/>
+      <Route path="/services"  element={<Services/>}/>
+      <Route path="/contact"  element={<Contact/>}/>
+
+      </Routes>
+    </Router>
+  </div>
 }
 
 export default App

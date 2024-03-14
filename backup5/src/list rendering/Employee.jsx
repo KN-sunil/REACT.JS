@@ -46,4 +46,4 @@ class Employee extends React.Component{
 }
 
 
-export default Employee
+export default Employee 
