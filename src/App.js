@@ -1,4 +1,4 @@
-import {Link,BrowserRouter as Router,Routes,Route} from 'react-router-dom'
+/* import {Link,BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
 import Services from './components/Services'
@@ -28,4 +28,34 @@ function App(){
   </div>
 }
 
+export default App */
+
+
+import  {Link,BrowserRouter as Router,Switch,Route} from "react-router-dom"
+import Navbar from "../src/components/Navbar"
+import About from "./components/About"
+import Contact from "./components/Contact"
+import Home from "./components/Home"
+import Services from "./components/Services"
+import { Redirect } from "react-router-dom/cjs/react-router-dom.min"
+
+
+
+function App(){
+  return (<div>
+   
+        <Router>
+        <Navbar />
+          <Switch>
+          {/* /<Route exact path="/" component={Navbar}/> */}
+            <Route exact path="/home" component={Home}/>
+            <Route exact path="/about" component={About}/>
+            <Route exact path="/services" component={Services}/>
+            <Route exact path="/contact"  component={Contact}/>
+            <Route exact path="/*"  render={()=> <Redirect to="/home"/>} />
+
+          </Switch>
+        </Router>
+  </div> )
+}
 export default App
