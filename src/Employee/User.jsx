@@ -22,7 +22,7 @@ class User extends React.Component{
     render(){
         let{users}=this.state.empData
         return <div className="container">
-            <pre>{JSON.stringify(this.state.empData)}</pre>
+            {/* <pre>{JSON.stringify(this.state.empData)}</pre> */}
             <div className="row">
                 <div className="col-8">
                     {
@@ -42,7 +42,7 @@ class User extends React.Component{
                             <tbody>
                                 {
                                   users.map((user)=>{
-                                      return <tr>
+                                      return <tr key={user.id}>
                                         <td>{user.id}</td>
                                         <td>{user.lastName}</td>
                                         <td>{user.age}</td>
