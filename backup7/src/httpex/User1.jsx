@@ -10,9 +10,6 @@ class User extends Component{
         .then((resp)=>{
            console.log(resp.data)
            this.setState({ users:resp.data })
-
-           
-
         })
         .catch((err)=>{
            console.log("error message")

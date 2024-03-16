@@ -4,9 +4,11 @@ class User extends Component {
   state={
     users:[]
   }  
+
  
-  componentDidMount(){
+  componentDidMount(){                       //this will execute after render method
      Axios.get('https://jsonplaceholder.typicode.com/users')
+
     .then((resp)=>{
         console.log(resp.data)
       this.setState({ users:resp.data })
@@ -16,6 +18,8 @@ class User extends Component {
     })
   }
   render() {
+    console.log("Test Case 1")
+    
     return (
       <div>
         <h2>User Component</h2>
