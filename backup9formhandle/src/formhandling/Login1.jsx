@@ -9,7 +9,7 @@ class Login extends React.Component{
     updateHandler=(event)=>{                                                //WITHOUT MULTIPLE HANDLERS
         this.setState({[event.target.name]:event.target.value})
     }
-
+ 
     submitHandler=(event)=>{
         event.preventDefault();
     }
