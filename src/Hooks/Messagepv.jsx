@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+ import React,{useState} from "react";
 let  Message=()=>{
    let[Message,setMessage]=useState("Hello")
 
@@ -9,12 +9,12 @@ let  Message=()=>{
    let gaHandler=()=>{
     setMessage("Good afternoon")
    }
-//    let geHandler=()=>{
-//     setMessage("Good evening")
-//    }
-//    let gnHandler=()=>{
-//     setMessage("Good night")
-//    }
+    let geHandler=()=>{
+     setMessage("Good evening")
+   }
+    let gnHandler=()=>{
+    setMessage("Good night")
+    }
 
    return(
     <div>
@@ -27,4 +27,9 @@ let  Message=()=>{
     </div>
    )
 }
-export default Message
+export default Message 
+
+
+
+
+
