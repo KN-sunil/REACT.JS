@@ -23,29 +23,29 @@
 import React,{useState} from "react";
 
 let Message=()=>{
-    let[state,setState]=useState({Message:"hello"})
-    console.log(state)
+    let[msg,setMsg]=useState({Message:"hello"})
+    console.log(msg)
     let gmHandler=()=>{
-        setState({Message:"Good morning"})
+        setMsg({Message:"Good morning"})
         console.log("updated")
     }
     let gaHandler=()=>{
-        setState({Message:"Good afternoon"})
+        setMsg({Message:"Good afternoon"})
     }
-     let geHandler=()=>{
-         setState({Message:"Good evening"})
+    //  let geHandler=()=>{
+    //      setMsg({Message:"Good evening"})
 
-    }
-     let gnHandler=()=>{
-        setState({Message:"Good night"})
-     }
+    // }
+    //  let gnHandler=()=>{
+    //     setMsg({Message:"Good night"})
+    //  }
     return (
         <div>
             <h1>Message component</h1>
-            <h2>Message:{state.Message}</h2>
+            <h2>Message:{msg.Message}</h2>
             <button onClick={gmHandler}>GM</button>
             <button onClick={gaHandler}>GA</button>
-            <button onClick={()=>{setState("Good evening")}}>GE</button>
+            <button onClick={()=>{setMsg("Good evening")}}>GE</button>
             <button onClick={gaHandler}>GN</button> 
         </div>
     )

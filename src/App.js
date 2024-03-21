@@ -1,15 +1,19 @@
-import React, { Component } from "react";
-//import Message from "./Hooks/Messagepv";
-import Message from "./Hooks/Messagenpv";
-// import Counter from "./Hooks/Counter";
-// import Users from "./Hooks/Users";
+import { Fragment } from "react"
+import Navbar from "./Navbar/Navbar"
+import { BrowserRouter as Router,Routes,Route } from "react-router-dom"
+import Home from "./ContactApp/Home"
+import ContactApp from "./ContactApp/ContactApp"
 
-class App extends Component{
-  render(){
-    return <div>
-      <h1>App component</h1>
-      <Message/>
-    </div>
-  }
+const App=()=>{
+  return<Fragment>
+    <Router>
+      <Navbar/>
+      <Routes>
+        <Route path="/home" element={<Home/>}/>
+        <Route path="/contact" element={<ContactApp/>}/>
+      </Routes>
+    </Router>
+  </Fragment>
 }
+
 export default App
