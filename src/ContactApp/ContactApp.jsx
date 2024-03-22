@@ -16,6 +16,7 @@ const ContactApp=()=>{
 
     let selectedContact=(contact)=>{
         setselContact(contact)
+
     }
     return <div>
         {/* <pre>{JSON.stringify(contacts)}</pre>
