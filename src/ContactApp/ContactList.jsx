@@ -1,37 +1,39 @@
-import React from "react";
-import {json} from "react-router-dom"
-
-const ContactList=(contactData)=>{
-    let showContact=(contact)=>{
-        contactData.selectedContact(contact);
+import React,{Component} from "react";
+ class ContactList extends Component {
+    showContact=(contact)=>{
+        this.props.selectedContact(contact)
     }
-    return <div>
-    {/*  <h2>Contact List</h2> */}
-   {/*   <pre>{JSON.stringify(contactData)}</pre> */}
-     <div className="row">
-         <div className="col">
-             <table className='table'>
-                 <thead>
-                     <tr>
-                         <th>Id</th>
-                         <th>Name</th>
-                         <th>Email</th>
-                     </tr>
-                 </thead>
-                 <tbody>
-                     {
-                         contactData.contacts.map((contact,index)=>{
-                             return <tr key={index} onClick={showContact.bind(null,contact)}>
-                                 <td>{contact.login.uuid.substr(32)}</td>
-                                 <td>{contact.name.first}</td>
-                                 <td>{contact.email}</td>
-                             </tr>
-                         })
-                     }
-                 </tbody>
-             </table>
-         </div>
-     </div>
-   </div>
- }
+  render() {
+    return (
+     <>
+     <h2>ContactList</h2>
+     {/* <pre>{JSON.stringify(this.props)}</pre> */}
+     <hr/>
+     <table className="table table-striped">
+        <thead className="bg-primary text-white">
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>EMAIL</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            {
+                this.props.contacts.map((contact,i)=>{
+                    return<tr key={i} onClick={this.showContact.bind(this,contact)}>
+                       <td>{contact.login.uuid.substr(32)}</td>
+                       <td>{contact.name.first}</td>
+                       <td>{contact.email}</td>
+                    </tr>
+                })
+            }
+        </tbody>
+
+     </table>
+     </>
+    )
+  }
+}
+
 export default ContactList
